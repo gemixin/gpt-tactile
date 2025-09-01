@@ -15,7 +15,6 @@ from openai import OpenAI
 import os
 import shared_funcs
 
-# Define model version
 MODEL = 'gpt-5-mini'
 
 

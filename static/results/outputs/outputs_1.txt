@@ -1,0 +1,98 @@
+Prompt type: prompt_multi_choice.txt 
+Image directory: ball 
+GPT: My best guess is: sponge.
+
+Reasoning: the contact area shows many small, irregular bright spots and a diffuse, highly compliant-looking imprint rather than smooth continuous contact or regular ridges. That granular, porous pattern and the soft deformation across different contact locations match a sponge much better than smooth/rigid items (tin, Pringles tube, hammer, scissors), fabric/fuzzy nap (tennis ball), or fingerprint ridges (human fingertip). 
+
+---
+Prompt type: prompt_multi_choice.txt 
+Image directory: banana 
+GPT: My best guess is: a human fingertip.
+
+Reasoning: the images show repeating, curved parallel ridge/valley patterns (small-scale arcs) that look like fingerprint ridges contacting the gel. That kind of regular, closely spaced ridge structure fits a fingertip much better than the other choices (which are smoother, larger-curvature, or have different texture like sponge pores or hard edges). I’m somewhat confident but not certain. 
+
+---
+Prompt type: prompt_multi_choice.txt 
+Image directory: beans 
+GPT: My guess: a human fingertip.
+
+Reasoning: the images show repeated, curved parallel ridge impressions consistent with fingerprint ridges and the soft, continuous deformation of a compliant surface. The spacing/shape of the ridges and the way they curve around a central core look like a fingertip print rather than the coarse seam of a tennis ball, the smooth curvature of an apple/banana, or the hard straight edges of a can/Pringles tube. I'd say fairly high confidence (≈85–90%). 
+
+---
+Prompt type: prompt_multi_choice.txt 
+Image directory: hammer 
+GPT: I think this is a tennis ball.
+
+Why: the contact patches are rounded and vary in size/shape as the sensor moves (consistent with a compliant spherical surface). I also see a curved/diagonal line in one image that looks like the ball seam, and the surface scattering is diffuse (fuzzy) rather than the sharp, flat/oriented features you’d expect from a can, brick, scissors, or hammer. A sponge would show many small irregular pores; a fingertip would show fine ridge patterns — neither matches these images as well.
+
+Confidence: medium-high. 
+
+---
+Prompt type: prompt_multi_choice.txt 
+Image directory: pringles 
+GPT: I think this is a Pringles tube.
+
+Reasoning: multiple images show a curved, thin rim/edge and parallel seam-like ridges consistent with a cylindrical cardboard tube with a rolled metal/plastic top. Other patches look like printed label texture rather than uniform fuzz (tennis ball) or organic skin (banana/apple). I'm moderately confident but not certain. 
+
+---
+Prompt type: prompt.txt 
+Image directory: ball 
+GPT: My best guess is a tennis ball.
+
+Why: the images show a neon‑green, felt‑like, fibrous nap (small clustered fibers) that is characteristic of tennis‑ball felt. The patchy color/lighting is consistent with the DIGIT’s RGB illumination on a fuzzy surface. 
+
+Confidence: moderate (~60–70%). Alternatives that also fit the tactile appearance are a green scouring pad/scrubber or a small fuzzy toy/ball — to confirm, check for the tennis‑ball seam or measure diameter (~6.7 cm). 
+
+---
+Prompt type: prompt.txt 
+Image directory: banana 
+GPT: My best guess is that these are impressions of a human fingertip (a finger pad) pressed against the DIGIT sensor.
+
+Why I think so
+- The contact shows curved, roughly parallel ridge patterns that resemble fingerprint ridges and a central core/loop-like region.
+- Some frames show a small triangular/curved feature at the edge that looks like where a fingernail or nailbed deforms the gel.
+- Overall scale and the way the gel deforms (localized ridges, small rounded bumps rather than a single flat edge) are consistent with a fingertip rather than a hard object.
+
+Confidence: moderate (about 60–80%). It could also be a similarly ridged soft object (e.g., glove fingertip, textured rubber), but a human fingertip is the most likely specific object given the patterns. If you can provide one higher-resolution frame or a view at a slightly different angle I can try to firm up the guess. 
+
+---
+Prompt type: prompt.txt 
+Image directory: beans 
+GPT: My best guess is an aluminum soda/soft‑drink can (e.g., a standard 12‑oz can) — i.e., a smooth cylindrical beverage can.
+
+Why:
+- The impressions show a smooth, consistent large-radius curvature across the set (looks like moving around a cylinder).
+- A narrow, sharper arc in some frames looks like the can’s lip/bead or a machining seam.
+- Texture is overall smooth rather than fibrous or highly ridged (consistent with metal can rather than cloth or a threaded plastic cap).
+
+Confidence: moderate (~60%). Other plausible objects with similar smooth cylindrical curvature are plastic water bottles or metal thermos bodies — I can narrow it down further if you can say the object’s material (metal vs plastic) or supply one image from a different contact angle. 
+
+---
+Prompt type: prompt.txt 
+Image directory: hammer 
+GPT: My best guess: a LEGO 1x2 brick (the top face with two studs).
+
+Why:
+- Multiple images show two circular, equally spaced, raised features pressed into the gel — consistent with LEGO studs.
+- One frame shows a single larger circular impression (sensor pressed onto a single stud), the others show the pair aligned vertically — matches the 2-stud layout of a 1x2 brick.
+- The circular rim and shallow dome shape visible in the tactile imprint look like a hard plastic stud rather than an organic bump or soft texture.
+
+Confidence: about 65–75% (plausible alternatives include other small plastic parts with two round bosses or a dual-button piece).
+
+If you want higher certainty, you can:
+- Provide a wider-view tactile image showing more of the object or its edges.
+- Press the sensor across the object to measure the center-to-center distance between the two circular impressions (LEGO stud pitch is 8 mm). 
+
+---
+Prompt type: prompt.txt 
+Image directory: pringles 
+GPT: My best guess is a ceramic coffee mug (a drinking cup) — e.g., a coffee/tea mug with a loop handle and a printed/colored design.
+
+Why:
+- One image shows a clear curved rim-like feature consistent with the top edge of a cup.
+- Several images show two roughly parallel raised lines that match the two edges of a looped handle pressed against the sensor.
+- Other patches show irregular textured/printed areas that look like decoration or a logo on a mug’s side.
+
+Confidence: ~70% (could also be a similarly shaped drinking cup/teacup). 
+
+---

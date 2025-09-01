@@ -1,0 +1,7 @@
+name: gpt-tactile
+dependencies:
+  - python>=3.10  # Tested with 3.13.5 but other versions should work
+  - openai
+  - pip  # Install pip 
+  - pip:
+    - digit-interface  # Official DIGIT Python interface

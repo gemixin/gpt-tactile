@@ -1,0 +1,105 @@
+Prompt type: prompt_multi_choice.txt 
+Image directory: ball 
+GPT: I think it's a sponge (the porous/foamy type).
+
+Reasoning: the contact patches show many small, irregular granular bumps and a compressible, uniform texture across views — consistent with foam/sponge pores. I don’t see linear seams or fuzzy strands (tennis ball), smooth skin or ridges (banana, apple, fingertip), or hard sharp features/edges (brick, metal tin, hammer, scissors, Pringles tube). 
+
+---
+Prompt type: prompt_multi_choice.txt 
+Image directory: banana 
+GPT: I think this is a human fingertip (high confidence).
+
+Why: the contact patches show small-scale curved ridge/whorl patterns and fine texture that look like fingerprint ridges, and the impressions are localized and deformable in a way consistent with soft skin. Hard, smooth objects (tin, brick, pringles tube, hammer, scissors) would give flatter, crisper contact boundaries; porous sponge would show many irregular holes rather than ridge-like curves; round fruits (apple/banana/tennis ball) would give broader, smoother contact textures. 
+
+---
+Prompt type: prompt_multi_choice.txt 
+Image directory: beans 
+GPT: I think it's a tennis ball — the contact patches show a mostly smooth, strongly curved surface with a narrow, raised/seamed line in different places (consistent with the tennis‑ball seam), rather than fingerprint ridges, pores, a flat brick face, or a cylindrical rim. Confidence: ~85%. 
+
+---
+Prompt type: prompt_multi_choice.txt 
+Image directory: hammer 
+GPT: I think this is a pair of scissors.
+
+Why:
+- Images 2 and 4 clearly show two small round holes aligned together — consistent with the two finger/hand holes in a scissor handle.
+- Image 5 shows a larger circular contact that matches the pivot/screw joint of scissors.
+- Images 1, 3 and 6 show elongated straight contact shapes that match the long blade edges.
+
+Confidence: fairly high based on those distinct circular holes + blade-like linear contacts. 
+
+---
+Prompt type: prompt_multi_choice.txt 
+Image directory: pringles 
+GPT: I think it’s a banana.
+
+Reasoning: several images show curved, elongated parallel ridges and a smooth-but-speckled surface (brownish/greenish patches) consistent with banana peel texture and its longitudinal ridges. The impressions look soft and deformable rather than hard/metallic or fibrous (ruling out tin, brick, hammer, scissors), and the pattern doesn’t match fine fingerprint ridges or the uniform fuzz of a tennis ball. 
+
+---
+Prompt type: prompt.txt 
+Image directory: ball 
+GPT: My best guess is a tennis ball (the green/yellow felt surface).
+
+Why I think that
+- The contact area shows a dense, fine, fibrous / tufted texture — what you'd expect from felt/fuzz.
+- The pattern is fairly uniform across different patches (same material over the object) and the scale of asperities looks like short fibers rather than large bumps.
+- Tennis balls are a common test object for tactile sensors, so it’s a plausible match.
+
+Confidence: moderate (≈60–70%). I could be wrong — other possibilities with similar small-scale fibrous texture include a green scouring pad / scrub sponge, or certain fruits/vegetables with bumpy surfaces (broccoli, kiwi), though those have different overall geometry and larger-scale features.
+
+How to disambiguate (easy checks)
+- Slide the sensor around the object: a tennis ball will reveal a seam/curved surface and relatively uniform fuzz; a scrub sponge will feel more abrasive; broccoli will show large irregular florets.
+- Use a higher-resolution contact normal map or a single visible-light photo to see color/shape (tennis ball has a distinctive seam and chartreuse felt).
+- Measure curvature: a tennis ball has a smooth, large-radius sphere. 
+
+---
+Prompt type: prompt.txt 
+Image directory: banana 
+GPT: My best guess is a plastic screw-on bottle cap (the ridged screw cap you find on soda/water bottles).
+
+Why I think that
+- The contact images show repeating, evenly spaced radial ridges/serrations — consistent with the vertical ribs on a bottle cap’s circumference.
+- The impressions are curved and follow a circular arc in different frames, suggesting you’re touching different parts of a round object.
+- The features look like relatively hard plastic making sharp, narrow impressions in the gel rather than soft cloth/fabric or many fine bristles.
+
+Confidence: ~60% (plausible but not certain).
+
+Other plausible alternatives
+- A small ridged plastic part such as a jar cap tamper ring or a gear with shallow teeth.
+- A comb or brush edge (less likely given the curved/radial arrangement).
+
+If you want higher confidence, you could
+- Capture a top-down tactile scan across a full rotation of the object so the circular pattern becomes clearer.
+- Provide an RGB photo of the object or an actual depth map from the sensor. 
+
+---
+Prompt type: prompt.txt 
+Image directory: beans 
+GPT: My best guess is a plastic screw‑on bottle cap (for example a soda/water bottle cap).
+
+Why:
+- Each patch shows a pronounced curved rim/edge consistent with a circular object.
+- Several images show evenly spaced, nearly parallel raised lines or ridges (green bands) that look like the grip ribs / thread-start region found on screw caps.
+- The surface appears smooth and slightly glossy in the normal/colour map (consistent with molded plastic).
+
+Confidence: moderate (≈70%). Possible alternatives would be another small circular ridged lid (metal jar lid or knob) — I’d lean toward a plastic bottle cap.
+
+If you can, pressing/collecting another tactile image across the actual rim (to show a full arc) or an image centered on the cap’s top (showing the central dimple/printing) would help confirm. 
+
+---
+Prompt type: prompt.txt 
+Image directory: hammer 
+GPT: My best guess is a standard plastic six‑sided die (d6).
+
+Why: several images show small circular, evenly spaced round depressions (pips) — in some frames two vertically aligned pips and in another a single larger circular impression — which matches the recessed pip pattern on die faces. The smooth plastic surface and regular spacing are also consistent with a molded gaming die. I’d give this a moderate-to-high confidence (~70–85%). Alternative, less likely matches would be a domino or a LEGO/plastic part with circular features, but the recessed pip appearance points toward a die. 
+
+---
+Prompt type: prompt.txt 
+Image directory: pringles 
+GPT: My best guess is a metal tablespoon (a piece of cutlery — a spoon).
+
+Why: one image (third) shows a clear crescent/arc impression consistent with the curved bowl of a spoon. Other images show two parallel raised ridges along a long thin feature that look like the decorative grooves found on many metal spoon handles. The surface texture and small-scale mottling are also consistent with polished metal under DIGIT illumination.
+
+Confidence: moderate (≈60%). If you can share an image that includes a longer sweep along the same object (showing more of the handle and/or the entire bowl) I can be more certain. 
+
+---

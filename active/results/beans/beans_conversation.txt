@@ -1,0 +1,9 @@
+Initial multi-choice prompt and axis image sent.
+-----
+CAPTURE
+-----
+CAPTURE action successfully executed.
+captures/frame_1.jpg attached.
+-----
+PREDICTION: human fingertip, CONFIDENCE: 0.90
+-----

@@ -1,0 +1,95 @@
+Prompt type: prompt_multi_choice.txt 
+Image directory: ball 
+GPT: Sponge.
+
+The tactile images show a soft, highly irregular/porous texture (no fingerprint ridges, seams or smooth metal/curved patterns). The bumpy, non-directional granularity and variable contact pattern match a sponge much better than the other options. 
+
+---
+Prompt type: prompt_multi_choice.txt 
+Image directory: banana 
+GPT: I think it's a human fingertip.
+
+Reasoning: the contact impressions are soft and highly localised, with multiple curved, concentric ridges/creases rather than a single sharp edge or flat surface. That pattern and scale match a fingertip fingerprint/skin folds more than rigid objects (tin/brick/hammer/scissors/Pringles) or porous textures (sponge) or smooth large curves (banana/apple/tennis ball). 
+
+---
+Prompt type: prompt_multi_choice.txt 
+Image directory: beans 
+GPT: My best guess is a tennis ball.
+
+Reasoning: the tactile impressions show a smooth, consistently curved surface with a pronounced curved seam/edge in several images (a narrow raised/indented band), which matches a tennis ball’s curved shell and stitched seam. The patterns don’t match porous/spongey texture, flat/rectilinear shapes (brick), or fine skin ridges (fingertip), so a spherical object with a seam like a tennis ball is the closest fit. I might be wrong if the seam is actually a thin tube rim (Pringles/tin), but tennis ball is most likely. 
+
+---
+Prompt type: prompt_multi_choice.txt 
+Image directory: hammer 
+GPT: I think it's a sponge.
+
+Reason: the contact images show multiple small, roughly circular depressions/pores and highly variable local compliance (sometimes a large shallow impression, sometimes small discrete holes). That pattern matches a soft, porous material (sponge) pressed into the gel. Other items (metal can, pringles tube, hammer, scissors) would give hard edges; a fingertip or apple would show ridge/skin or smooth curvature; a tennis ball or banana would show different surface textures — none match the clustered circular pores seen here.
+
+Confidence: ~80%. 
+
+---
+Prompt type: prompt_multi_choice.txt 
+Image directory: pringles 
+GPT: I think it's a tennis ball.
+
+Why: several frames show curved, narrow paired ridges and a seam-like crescent that match the raised seam on a tennis ball, plus a fuzzy/granular texture in the contact area (consistent with felt). Other candidates (metal can, brick, sponge, fingertip, etc.) would produce either much smoother, much coarser, or much finer/regular ridge patterns than these images show.
+
+Confidence: ~80–90%. 
+
+---
+Prompt type: prompt.txt 
+Image directory: ball 
+GPT: My best guess is the crown (florets) of a broccoli head.
+
+Why: the contact pattern shows many small, irregular, rounded nodules clustered together (the kind of granular, bumpy surface broccoli florets produce). The cluster shape and irregular spacing are more like a vegetable floret than linear fibers (tennis ball) or large pores (kitchen sponge). 
+
+Confidence: moderate (≈60%). I could be mistaken — a similarly bumpy object (e.g., a scrub sponge or a different vegetable floret) would produce a similar tactile appearance. 
+
+---
+Prompt type: prompt.txt 
+Image directory: banana 
+GPT: My best guess is that the object is a walnut (an in‑shell walnut or a walnut half). 
+
+Why: the tactile impressions show irregular, brain‑like lobes and deep, narrow grooves rather than regular ridges — the kinds of convoluted folds you see on a walnut shell. The repeated images look like different spots on the same small, highly textured, roughly spherical object. 
+
+Confidence: moderate (≈50–70%). Other plausible alternatives are a small, heavily ridged seashell or a similar wrinkled nut (e.g., pecan). 
+
+---
+Prompt type: prompt.txt 
+Image directory: beans 
+GPT: My best guess is a plastic screw-top water/soda bottle (a PET bottle near the neck/thread area).
+
+Why:
+- All images show the same smooth, glossy curved surface and a thin sharp rim consistent with a cylindrical neck.
+- I can make out a narrow, raised curved band and small repeated ridges in a couple of views that look like bottle thread/mold features.
+- The surface appearance (smooth, slightly specular) matches injection‑molded PET/plastic more than rough/fuzzy materials.
+
+Confidence: moderate (about 60–75%). It could also be a drinking glass or jar with a similar rounded lip, but the subtle ridge/thread-like features favor a plastic screw-top bottle. 
+
+---
+Prompt type: prompt.txt 
+Image directory: hammer 
+GPT: Most likely a small 1x2 LEGO brick (a 2‑stud LEGO piece).
+
+Why:
+- Multiple frames show two roughly circular, hemispherical contacts aligned vertically — exactly what the two studs on a 1×2 LEGO brick would produce when pressed against the soft DIGIT membrane.
+- The circles have a hard, smooth rim/curvature consistent with molded plastic studs.
+- The spacing and relative size of the two bumps match the expected stud pitch on a small LEGO piece.
+
+Confidence: moderate (~70%). An alternate plausible object would be any small plastic piece with two raised studs/buttons in a vertical pair (e.g., a similar toy brick), but a 1×2 LEGO brick fits best. 
+
+---
+Prompt type: prompt.txt 
+Image directory: pringles 
+GPT: My best guess is that these taps were taken from a metal fork.
+
+Why:
+- Several frames show two very narrow, nearly parallel raised ridges consistent with adjacent fork tines pressed into the sensor.
+- One frame has a smooth, shallow curved contact (the blue arc) that looks like the curved base/shoulder where the tines meet the fork’s neck.
+- Another frame shows an irregular textured patch that could be the handle’s stamped/patterned area.
+
+Confidence: moderate (≈60%). Alternative possibilities that fit parts of the images are a curved scoop/spoon (for the arc) or a molded plastic bottle with a seam (for the parallel ridges), but the combination of parallel narrow ridges plus a nearby curved shoulder most closely matches a fork.
+
+If you can, press other regions (the handle end, between tines, and the very tip of tines) and share those images — that would let me confirm or revise the guess. 
+
+---

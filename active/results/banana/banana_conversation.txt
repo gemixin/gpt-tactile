@@ -1,0 +1,128 @@
+Initial open-ended prompt and axis image sent.
+-----
+CAPTURE
+-----
+CAPTURE action successfully executed.
+captures/frame_1.jpg attached.
+-----
+PREDICTION: sponge, CONFIDENCE: 0.12
+MOVE(X, 1)
+-----
+MOVE action successfully executed.
+-----
+CAPTURE
+-----
+CAPTURE action successfully executed.
+captures/frame_2.jpg attached.
+-----
+PREDICTION: apple, CONFIDENCE: 0.25
+ROTATE(X, 45)
+-----
+ROTATE action successfully executed.
+-----
+CAPTURE
+-----
+CAPTURE action successfully executed.
+captures/frame_3.jpg attached.
+-----
+PREDICTION: sponge, CONFIDENCE: 0.18
+MOVE(Y, 1)
+-----
+MOVE action successfully executed.
+-----
+CAPTURE
+-----
+CAPTURE action successfully executed.
+captures/frame_4.jpg attached.
+-----
+PREDICTION: sponge, CONFIDENCE: 0.20
+MOVE(Z, -0.1)
+-----
+Cannot move down due to object
+-----
+ROTATE(Z, 45)
+-----
+ROTATE action successfully executed.
+-----
+CAPTURE
+-----
+CAPTURE action successfully executed.
+captures/frame_5.jpg attached.
+-----
+PREDICTION: sponge, CONFIDENCE: 0.20
+MOVE(Z, 0.2)
+-----
+MOVE action successfully executed.
+-----
+CAPTURE
+-----
+CAPTURE action successfully executed.
+captures/frame_6.jpg attached.
+-----
+PREDICTION: sponge, CONFIDENCE: 0.20
+MOVE(X, -1)
+-----
+MOVE action successfully executed.
+-----
+CAPTURE
+-----
+CAPTURE action successfully executed.
+captures/frame_7.jpg attached.
+-----
+PREDICTION: sponge, CONFIDENCE: 0.20
+ROTATE(Y, 45)
+-----
+ROTATE action successfully executed.
+-----
+CAPTURE
+-----
+CAPTURE action successfully executed.
+captures/frame_8.jpg attached.
+-----
+PREDICTION: sponge, CONFIDENCE: 0.15
+MOVE(Z, -0.05)
+-----
+MOVE action successfully executed.
+-----
+CAPTURE
+-----
+CAPTURE action successfully executed.
+captures/frame_9.jpg attached.
+-----
+PREDICTION: sponge, CONFIDENCE: 0.18
+MOVE(Y, -1)
+-----
+Cannot move due to object
+-----
+RESET
+-----
+ROTATE action successfully executed.
+-----
+CAPTURE
+-----
+CAPTURE action successfully executed.
+captures/frame_10.jpg attached.
+-----
+PREDICTION: sponge, CONFIDENCE: 0.18
+MOVE(X, 2)
+-----
+MOVE action successfully executed.
+-----
+CAPTURE
+-----
+CAPTURE action successfully executed.
+captures/frame_11.jpg attached.
+-----
+PREDICTION: sponge, CONFIDENCE: 0.18
+ROTATE(X, -45)
+-----
+ROTATE action successfully executed.
+-----
+CAPTURE
+-----
+CAPTURE action successfully executed.
+captures/frame_12.jpg attached.
+-----
+PREDICTION: sponge, CONFIDENCE: 0.18
+MOVE(Z, -0.05)
+-----

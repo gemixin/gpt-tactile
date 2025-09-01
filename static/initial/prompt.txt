@@ -1,0 +1,7 @@
+Attached are 6 tactile images taken using a DIGIT visuo-tactile sensor on the same object. 
+
+The images cover different parts of the object.
+
+What do you think the object is? 
+
+Please provide a specific object prediction as opposed to a general shape/texture.

@@ -1,0 +1,95 @@
+Prompt type: prompt_multi_choice.txt 
+Image directory: ball 
+GPT: My best guess is: tennis ball.
+
+Reasoning: the contact patches show a fine, fairly uniform, fuzzy/granular texture across the contact area (not linear fingerprint ridges or the smooth skin of a banana/apple, and not the smooth/reflective pattern you’d expect from metal or hard plastic). That appearance is consistent with the felt/fiber surface of a tennis ball. I’m not certain, but tennis ball fits the observed tactile texture and deformation best. 
+
+---
+Prompt type: prompt_multi_choice.txt 
+Image directory: banana 
+GPT: I think it's a human fingertip.
+
+Why: the contact patches show fine, curved ridge/whorl patterns and a small, soft, deforming contact area that match fingerprint ridges. Hard objects (brick, tin, hammer) or fibrous textures (tennis ball, sponge) would give very different, larger-scale or sharper features. I'm fairly confident (high). 
+
+---
+Prompt type: prompt_multi_choice.txt 
+Image directory: beans 
+GPT: It looks like a curved cylindrical rim — my guess is a Pringles tube. The repeated narrow, smooth curved contact line in different frames matches a thin cylindrical container wall. Confidence: medium. 
+
+---
+Prompt type: prompt_multi_choice.txt 
+Image directory: hammer 
+GPT: Scissors.
+
+Reasoning: several images show two small, vertically aligned circular contact features that look like the finger holes in a scissors handle, plus curved/rounded contours in the other frames consistent with a molded handle. I’m fairly confident. 
+
+---
+Prompt type: prompt_multi_choice.txt 
+Image directory: pringles 
+GPT: Human fingertip.
+
+Reasoning: the impressions show repeating, curved parallel ridges and whorl-like patterns characteristic of fingerprint skin rather than hard edges or porous sponge texture. The scale and smooth deformation of the gel match a fingertip imprint from a DIGIT sensor. 
+
+---
+Prompt type: prompt.txt 
+Image directory: ball 
+GPT: My best guess is a broccoli floret (a small head of broccoli).
+
+Why: the tactile prints show many small, irregular clustered bumps and a rough, granular surface at a scale consistent with broccoli buds. The patterns repeat across the six touches (different parts of the same object) and look like compressible, non-uniform protuberances rather than regular ribbing or woven fibers you’d see on fabric or a sponge.
+
+Confidence: moderate (around 60–75%). To raise confidence I’d need a contact that captures a clear edge/contour or a color photo of the object, or a higher-resolution tactile imprint showing the size of individual bumps. 
+
+---
+Prompt type: prompt.txt 
+Image directory: banana 
+GPT: My best guess is that these tactile images are from a human fingertip (the finger pad).
+
+Why I think that
+- A few frames show curved, closely spaced ridge/valley patterns that look like fingerprint ridges.
+- The impressions look soft and deformable (the contact shape changes noticeably between frames), consistent with skin.
+- The left/right contrast and small localized indentations match how a fingertip presses and contacts a small visuo‑tactile sensor like DIGIT under different offsets.
+
+Confidence: about 65–75% (not certain). Other plausible objects would be a soft rubber/ silicone fingertip-like pad (glove) or a small soft fruit (grape/banana skin), but the ridge spacing and shapes point more toward a human finger.
+
+If you want, I can:
+- mark the ridge-like features,
+- compute a texture/ridge spacing estimate,
+- or compare these images to references to produce a more quantitative likelihood. 
+
+---
+Prompt type: prompt.txt 
+Image directory: beans 
+GPT: My best guess: a ceramic coffee/tea mug (i.e., the rim/side of a cylindrical drinking mug).
+
+Why I think so
+- Several frames show a consistent narrow curved arc — looks like the sensor contacting a thin, rounded rim or shoulder of a cylinder.
+- The contact patterns are smooth and continuous (not coarse or highly textured), matching glazed ceramic or smooth plastic.
+- Small localized dents/points (visible in a couple frames) look like minor surface imperfections rather than a regularly repeating rib or pore pattern you’d expect on bottles or fruit.
+
+Confidence: ~60% (plausible alternatives include a plastic water/soda bottle or other small cylindrical container).
+
+If you want higher confidence, try capturing:
+- A wider set of contact points around the object (to measure the radius of curvature).
+- A direct press on a flatter area (to confirm smooth glaze vs. polymer ribs).
+- An image of the object in-hand or another view so I can correlate tactile cues with visible features. 
+
+---
+Prompt type: prompt.txt 
+Image directory: hammer 
+GPT: My best guess is a small LEGO brick — specifically a 1x2 LEGO brick (two circular studs in a row).
+
+Why: the tactile impressions show distinct small, round, regularly spaced circular bumps (studs) and a narrow flat/raised strip between them — exactly the geometry of a two‑stud LEGO brick. The colored ring patterns are just the DIGIT sensor’s RGB lighting highlighting the circular convex features. I’d give this guess moderate confidence (~70%). An alternative that could produce similar impressions is a blister‑pack or any object with two small, regularly spaced circular bumps. 
+
+---
+Prompt type: prompt.txt 
+Image directory: pringles 
+GPT: My best guess is a metal spoon (e.g., a tablespoon / eating spoon).
+
+Why:
+- One view (third image) shows a clear concave, crescent-shaped impression that looks like the bowl of a spoon.
+- Other views show pairs of long parallel contact ridges and a smooth specular surface consistent with a polished metal handle/edge.
+- The strong colored highlights and sharp transitions fit a smooth, reflective utensil rather than a soft or highly textured object.
+
+Confidence: moderate (~60–75%). An alternative that also fits some images is a fork (tines can produce parallel lines), but the concave bowl shape makes “spoon” more likely. 
+
+---

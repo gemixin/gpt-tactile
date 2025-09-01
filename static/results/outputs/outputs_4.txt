@@ -1,0 +1,97 @@
+Prompt type: prompt_multi_choice.txt 
+Image directory: ball 
+GPT: I think it's a tennis ball.
+
+Reason: the tactile images show a fine, random, fibrous/noisy texture across the contact patch and a smoothly varying contact/pressure gradient consistent with a curved, soft fuzzy surface. That pattern doesn't look like hard metal (tin), a fingerprint (distinct ridges), or a smooth peel (banana/apple) — it matches the nap of a tennis ball. 
+
+---
+Prompt type: prompt_multi_choice.txt 
+Image directory: banana 
+GPT: Human fingertip.
+
+Reasoning:
+- The contact shows curved, repeating ridge patterns like fingerprint whorls/loops rather than uniform fuzz (tennis ball), pores/holes (sponge), or hard-surface contact.
+- The impression looks like soft skin deformation — scale and detail match a fingertip pressed into the elastomer.
+- Rigid objects (tin, brick, hammer, scissors, pringles tube) would give crisper, non-ridged geometry; fruits (banana, apple) lack the fine ridged texture seen here.
+
+Confidence: high. If you want, I can mark the ridges on one frame to show the match. 
+
+---
+Prompt type: prompt_multi_choice.txt 
+Image directory: beans 
+GPT: Most likely a human fingertip.
+
+Why: the images show curved, regularly spaced parallel ridges and soft elastic deformation of the gel — exactly the pattern of fingerprint (friction) ridges. Hard edges (can, Pringles tube, brick, hammer) would produce sharp linear/rim contacts; a tennis ball or sponge would show fuzzy or porous texture rather than clear ridge arcs; a banana/apple would give smoother continuous contact without the fine, repeated ridge spacing seen here.
+
+Confidence: ~80–90%. 
+
+---
+Prompt type: prompt_multi_choice.txt 
+Image directory: hammer 
+GPT: I think this is scissors.
+
+Why: several frames show two small, round, strongly ringed contact patches aligned vertically (looks like the two finger/ thumb holes in a scissor handle), and other frames show a single larger circular contact (could be the pivot rivet or one handle pressed differently). The sharp circular impressions and hard-surface appearance match plastic/metal scissor handles rather than soft/porous objects like sponge, banana, or fingertip.
+
+Confidence: medium–high. 
+
+---
+Prompt type: prompt_multi_choice.txt 
+Image directory: pringles 
+GPT: I think it's a human fingertip.
+
+Reason: the images show regular, closely spaced parallel ridges and loop/whorl-like patterns consistent with fingerprint ridge structure. None of the other candidate objects (banana, tin, sponge, tennis ball, etc.) produce that regular ridge/whorl pattern at this scale. 
+
+---
+Prompt type: prompt.txt 
+Image directory: ball 
+GPT: Likely a two-sided kitchen scrub sponge (the green abrasive scouring side next to a softer pink foam side — e.g. a Scotch‑Brite style dish sponge).
+
+Why: the images show a clear boundary between a coarse, granular/abrasive green region and a softer, porous pink region. Those two distinct textures and colors match the common two‑sided kitchen scrubbing sponge. My confidence: medium-high. 
+
+---
+Prompt type: prompt.txt 
+Image directory: banana 
+GPT: My best guess: a plastic screw-on bottle cap (for example a water/soda bottle cap or similar twist-off plastic lid).
+
+Why:
+- The images show repeated, evenly spaced radial ribs/raised ridges — a common grip pattern on screw caps.
+- The features are fairly sharp and small-scale (matches plastic moulded ridges), with curved/concave impressions consistent with the cap’s circular curvature.
+- Color-coded shading from the DIGIT lighting suggests the surface normals change regularly in a radial pattern, as you’d expect from the circumference of a cap.
+
+Confidence: ~65–75%.  
+Other plausible objects: a twist-off jar lid, a small plastic knob with radial grip ribs, or a gear-like plastic ring. If you can provide a few additional contacts (different angles or a full top-down shot) I can narrow it down further. 
+
+---
+Prompt type: prompt.txt 
+Image directory: beans 
+GPT: My best guess is a plastic screw-on bottle cap (e.g., a soda/water bottle cap) — confidence: moderate (~60%).
+
+Why:
+- The impressions show a smooth, continuous curved rim and a narrow raised edge-like feature (visible as the dark/bright arc across several frames) consistent with a circular cap lip.
+- Several images show repeated, slightly parallel bright streaks/ridges along the curve, which match the shallow vertical ridges found on the sides of many plastic bottle caps.
+- The contact area is relatively small and curved rather than flat or highly textured, which fits a cap better than, say, fabric or coarse-grained materials.
+
+Possible alternatives (lower confidence): jar lid / plastic cup rim or other small circular plastic part with a raised lip and vertical ridges. 
+
+---
+Prompt type: prompt.txt 
+Image directory: hammer 
+GPT: My best guess is a small plastic LEGO brick (a 1×2 stud brick). 
+
+Why:
+- Several frames clearly show small circular raised studs with a defined rim (two studs stacked vertically in some images), which matches the shape and spacing of LEGO studs.
+- The surrounding area looks like smooth, hard plastic (consistent with LEGO).
+- The long vertical feature in a couple images looks like the brick’s rectangular body next to the studs.
+
+Confidence: moderate (≈60–75%). If you can provide a wider-view tactile image that includes more of the object or a photo of the object itself, I can confirm or revise the guess. 
+
+---
+Prompt type: prompt.txt 
+Image directory: pringles 
+GPT: My best guess is a stainless‑steel dinner fork.
+
+Why: several frames show narrow, evenly spaced, curved linear impressions that look like individual fork tines pressing into the gel. Another view shows a curved rim/arc consistent with the junction where the tines meet the fork body, and the strong specular highlights fit a polished metal utensil.  
+
+Confidence: medium (could be a similar metal utensil with multiple thin prongs). To be more certain, a contact that clearly shows all four tines or the handle shape would help. 
+
+---

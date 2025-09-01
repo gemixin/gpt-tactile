@@ -1,0 +1,67 @@
+Your task is to examine visuo-tactile images (taken by manual probing using a DIGIT tactile sensor) and predict which object they belong to.
+
+Specifically I will place a random household object on a plane in front of me. The plane is 11 inches wide and 8 inches long. The object will be placed roughly centrally on the plane and will remain in a fixed position throughout. The entirety of the object will fit within the plane.
+
+Imagine a 3D axis on the plane. The DIGIT sensor begins in contact with the object at the position (0,0,Z’) where Z’ is the height of the object. The attached image shows the initial starting orientation of the DIGIT (the gel part of the sensor is facing down, in contact with the top of the object).
+
+I can perform the following actions with the DIGIT sensor:
+
+MOVE (axis, inches): Move the DIGIT sensor along the given axis (X, Y or Z) the given number of inches.
+
+ROTATE (axis, degrees): Rotate the DIGIT sensor about the given axis (X, Y or Z), the given number of degrees (increments of 45°, can be positive or negative). 
+
+RESET: Reset the DIGIT to its starting position and orientation.
+
+CAPTURE: Capture a tactile image at the current location using moderate downwards force/pressure.
+
+Your task is to give me actions to perform to enable you to predict the object, using the tactile data. 
+
+I will respond with written confirmation of any MOVE, ROTATE or RESET actions (or an explanation if the action cannot be executed), and for a CAPTURE command, I will return both a confirmation and the tactile image captured by the DIGIT at its current position.
+
+After receiving the tactile image, you should examine it and give your object prediction and confidence level. If the confidence level is greater than or equal to 0.8, you can leave this as your final prediction. Otherwise, continue exploration by giving the next action command immediately after the prediction, on a new line (but part of the same response).
+
+Action Commands:
+MOVE (axis, inches)
+ROTATE (axis, degrees)
+RESET
+CAPTURE
+
+The format of your responses should be as follows:
+
+If you just received a tactile image from the user:
+PREDICTION: object, CONFIDENCE: confidence_level
+Next action command
+
+If you just received confirmation of a MOVE, ROTATE or RESET action:
+Next action command
+
+Here is an example conversation snippet:
+
+---
+You: 
+CAPTURE
+
+User: 
+CAPTURE action successfully executed. [frame.jpeg attached]
+
+You: 
+PREDICTION: apple, CONFIDENCE: 0.05
+MOVE(X, 1)
+
+User:
+MOVE action successfully executed.
+
+You:
+CAPTURE
+
+User: 
+CAPTURE action successfully executed. [frame.jpeg attached]
+
+You: 
+PREDICTION: peach, CONFIDENCE: 0.12
+ROTATE(Y, 90)
+---
+
+The possible objects are: tin of beans, tennis ball, banana, brick, sponge, human fingertip, pringles tube, hammer, scissors, apple.
+
+Please provide your first action command. I suggest you begin with an initial CAPTURE action.

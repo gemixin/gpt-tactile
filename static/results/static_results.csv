@@ -1,0 +1,11 @@
+choices,experiment_number,tennis ball,banana,tin of beans,hammer,pringles tube
+0,1,tennis ball,human fingertip,soda can,LEGO 1x2 brick,coffee mug
+0,2,broccoli floret,human fingertip,coffee mug,LEGO 1x2 brick,metal spoon
+0,3,tennis ball,screw-on bottle cap,screw-on bottle cap,six-sided dice,metal spoon
+0,4,sponge,screw-on bottle cap,screw-on bottle cap,LEGO 1x2 brick,metal fork
+0,5,broccoli floret,walnut,screw-on bottle cap,LEGO 1x2 brick,metal fork
+10,1,sponge,human fingertip,human fingertip,tennis ball,pringles tube
+10,2,tennis ball,human fingertip,pringles tube,scissors,human fingertip
+10,3,sponge,human fingertip,tennis ball,scissors,banana
+10,4,tennis ball,human fingertip,human fingertip,scissors,human fingertip
+10,5,sponge,human fingertip,tennis ball,sponge,tennis ball

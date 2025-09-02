@@ -13,7 +13,7 @@ Date: August 2025
 
 from openai import OpenAI
 import os
-import shared_funcs
+import shared_functions
 
 MODEL = 'gpt-5-mini'
 
@@ -77,7 +77,7 @@ for prompt_type in prompts_txt_files:
 
         # Create a file for each object image and append to content
         for img_path in object_img_paths:
-            file_id = shared_funcs.create_file(client, img_path)
+            file_id = shared_functions.create_file(client, img_path)
             content.append({
                 'type': 'input_image',
                 'file_id': file_id,

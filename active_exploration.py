@@ -15,7 +15,7 @@ Date: August 2025
 from digit_controller import DigitController
 import os
 from openai import OpenAI
-import shared_funcs
+import shared_functions
 
 MODEL = 'gpt-5-mini'
 PROMPT_TYPE = 'multi-choice'  # Can be multi-choice or open-ended
@@ -49,7 +49,7 @@ def chat_loop():
 
             # Create the initial image file
             axis_file_path = f'{current_dir}/active/initial/digit_axis.jpg'
-            file_id = shared_funcs.create_file(client, axis_file_path)
+            file_id = shared_functions.create_file(client, axis_file_path)
 
             # Instead of appending entire initial prompt, just append a summary
             conversation_list.append(f'Initial {PROMPT_TYPE} prompt and axis image sent.')
@@ -57,7 +57,7 @@ def chat_loop():
             print('GPT is thinking...')
 
             # Create the response
-            response = shared_funcs.create_response(
+            response = shared_functions.create_response(
                 client, MODEL, initial_prompt, current_response_id, image_id=file_id)
 
             # Set the first_time flag to False
@@ -72,7 +72,7 @@ def chat_loop():
                 case 'x':
                     print('Conversation terminated.')
                     save_dir = f'{current_dir}/active'
-                    shared_funcs.save_log(conversation_list, save_dir)
+                    shared_functions.save_log(conversation_list, save_dir)
                     break
                 # MOVE action shortcut
                 case 'm':
@@ -87,9 +87,9 @@ def chat_loop():
                 case 'c':
                     # Capture an image with the DIGIT sensor
                     save_dir = f'{current_dir}/active/captures'
-                    frame_path = shared_funcs.capture(dc, frame_counter, save_dir)
+                    frame_path = shared_functions.capture(dc, frame_counter, save_dir)
                     # Set file_id
-                    file_id = shared_funcs.create_file(client, frame_path)
+                    file_id = shared_functions.create_file(client, frame_path)
                     # Extract filename from path
                     frame_filename = os.path.basename(frame_path)
                     # Append frame filename to user prompt
@@ -113,14 +113,14 @@ def chat_loop():
             # If it was a capture action
             if capture_response:
                 # Create the response with the image file
-                response = shared_funcs.create_response(
+                response = shared_functions.create_response(
                     client, MODEL, user_prompt, current_response_id, image_id=file_id)
                 # Reset the flag
                 capture_response = False
             # If it was any other input
             else:
                 # Create the response with just text
-                response = shared_funcs.create_response(
+                response = shared_functions.create_response(
                     client, MODEL, user_prompt, current_response_id)
 
         # Update the current_response_id

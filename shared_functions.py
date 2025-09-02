@@ -14,6 +14,7 @@ def capture(dc, frame_counter, save_dir):
         dc (DigitController): The DIGIT controller instance.
         frame_counter (int): The current frame counter.
         save_dir (str): The directory to save the captured frame.
+
     Returns:
         str: The path of the captured frame.
     """
@@ -35,6 +36,7 @@ def create_file(client, file_path):
     Args:
         client (OpenAI): The OpenAI client instance.
         file_path (str): The path to the file to be created.
+
     Returns:
         str: The ID of the created file.
     """

@@ -4,4 +4,4 @@ The images cover different parts of the object.
 
 What do you think the object is?
 
-The possible objects are: tin of beans, tennis ball, banana, brick, sponge, human fingertip, pringles tube, hammer, scissors, apple?
+The possible objects are: tin of beans, tennis ball, banana, brick, sponge, human fingertip, pringles tube, hammer, scissors, apple.

@@ -30,12 +30,12 @@ cd gpt-tactile
 
 1. *(Optional)* Set up a virtual environment:
     ```bash
-    python3 -m venv venv
-    source venv/bin/activate
+    python3 -m venv .venv
+    source .venv/bin/activate
     ```
 2. Install required packages:
     ```bash
-    pip install -r requirements.txt
+    python3 -m pip install -r requirements.txt
     ```
 
 #### Option B: With Anaconda

@@ -15,7 +15,7 @@ from openai import OpenAI
 import os
 import shared_functions
 
-MODEL = 'gpt-5-mini'
+MODEL = "gpt-5-mini"
 
 
 def get_file_paths(dir, exts):
@@ -52,54 +52,58 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Get all directory paths from inside images folder
 image_dirs = []
-for img_dir in os.listdir(f'{current_dir}/static/images'):
-    if os.path.isdir(os.path.join(f'{current_dir}/static/images', img_dir)):
-        image_dirs.append(os.path.join(f'{current_dir}/static/images', img_dir))
+for img_dir in os.listdir(f"{current_dir}/static/images"):
+    if os.path.isdir(os.path.join(f"{current_dir}/static/images", img_dir)):
+        image_dirs.append(os.path.join(f"{current_dir}/static/images", img_dir))
 # Sort alphabetically
 image_dirs.sort()
 
 # Get all txt files from inside prompts folder
-prompts_txt_files = get_file_paths(f'{current_dir}/static/initial', ('.txt'))
+prompts_txt_files = get_file_paths(f"{current_dir}/static/initial", (".txt"))
 
 # For each prompt type
 for prompt_type in prompts_txt_files:
     # For each image directory (i.e. for each object)
     for image_dir in image_dirs:
         # Get prompt as a string from the txt file
-        with open(prompt_type, 'r') as f:
+        with open(prompt_type, "r") as f:
             prompt = f.read()
 
         # Get all object image paths
-        object_img_paths = get_file_paths(image_dir, ('.jpg', '.jpeg', '.png'))
+        object_img_paths = get_file_paths(image_dir, (".jpg", ".jpeg", ".png"))
         content = [
-            {'type': 'input_text', 'text': prompt},
+            {"type": "input_text", "text": prompt},
         ]
 
         # Create a file for each object image and append to content
         for img_path in object_img_paths:
             file_id = shared_functions.create_file(client, img_path)
-            content.append({
-                'type': 'input_image',
-                'file_id': file_id,
-            })
+            content.append(
+                {
+                    "type": "input_image",
+                    "file_id": file_id,
+                }
+            )
 
         # Create a response with the prompt and image files
         response = client.responses.create(
             model=MODEL,
-            input=[{
-                'role': 'user',
-                'content': content,
-            }],
+            input=[
+                {
+                    "role": "user",
+                    "content": content,
+                }
+            ],
         )
 
         # Print and store the output
-        output = f'Prompt type: {os.path.basename(prompt_type)} \n'
-        output += f'Image directory: {os.path.basename(image_dir)} \n'
-        output += f'GPT: {response.output_text} \n'
-        output += '\n---\n'
+        output = f"Prompt type: {os.path.basename(prompt_type)} \n"
+        output += f"Image directory: {os.path.basename(image_dir)} \n"
+        output += f"GPT: {response.output_text} \n"
+        output += "\n---\n"
         print(output)
         outputs.append(output)
 
 # Save outputs to outputs.txt locally
-with open(f'{current_dir}/outputs.txt', 'w') as f:
+with open(f"{current_dir}/outputs.txt", "w") as f:
     f.writelines(outputs)

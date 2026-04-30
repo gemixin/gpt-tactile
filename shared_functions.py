@@ -20,12 +20,12 @@ def capture(dc, frame_counter, save_dir):
     """
 
     # Show live view to help user position sensor
-    print('Showing live view. Hit ESC to close window.')
+    print("Showing live view. Hit ESC to close window.")
     dc.digit.show_view()
     # User hits ESC...
     dc.save_frame(save_dir, frame_counter)
     # Return the path of the captured frame
-    return f'{save_dir}/frame_{frame_counter}.jpg'
+    return f"{save_dir}/frame_{frame_counter}.jpg"
 
 
 def create_file(client, file_path):
@@ -40,10 +40,10 @@ def create_file(client, file_path):
     Returns:
         str: The ID of the created file.
     """
-    with open(file_path, 'rb') as file_content:
+    with open(file_path, "rb") as file_content:
         result = client.files.create(
             file=file_content,
-            purpose='vision',
+            purpose="vision",
         )
         return result.id
 
@@ -66,22 +66,19 @@ def create_response(client, model, message, current_response_id, image_id=None):
     # If no image is provided
     if image_id is None:
         # Create a text-only response
-        content = [{'type': 'input_text', 'text': message}]
+        content = [{"type": "input_text", "text": message}]
     # If an image is provided
     else:
         # Create a response with both text and image
         content = [
-            {'type': 'input_text', 'text': message},
-            {'type': 'input_image', 'file_id': image_id},
+            {"type": "input_text", "text": message},
+            {"type": "input_image", "file_id": image_id},
         ]
     # Build and return the response
     response = client.responses.create(
         model=model,
-        input=[{
-            'role': 'user',
-            'content': content
-        }],
-        previous_response_id=current_response_id
+        input=[{"role": "user", "content": content}],
+        previous_response_id=current_response_id,
     )
     return response
 
@@ -95,6 +92,6 @@ def save_log(conversation_list, save_dir):
         save_dir (str): The directory to save the conversation log.
     """
 
-    with open(f'{save_dir}/conversation.txt', 'w') as f:
+    with open(f"{save_dir}/conversation.txt", "w") as f:
         for line in conversation_list:
-            f.write(f'{line}\n-----\n')
+            f.write(f"{line}\n-----\n")

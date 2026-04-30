@@ -47,19 +47,19 @@ class DigitController:
         if digits:
             try:
                 # Get the first digit's serial number
-                serial = digits[0]['serial']
+                serial = digits[0]["serial"]
                 # Create a Digit instance with the serial number
-                digit = Digit(serial, 'Single_Digit')
+                digit = Digit(serial, "Single_Digit")
                 # Connect to the DIGIT device
                 digit.connect()
-                print(f'Connected to DIGIT with serial number: {serial}')
+                print(f"Connected to DIGIT with serial number: {serial}")
                 # Return the device instance
                 return digit
             except Exception as e:
-                print(f'Failed to connect to DIGIT: {e}')
+                print(f"Failed to connect to DIGIT: {e}")
                 return None
         else:
-            print('No DIGIT devices found.')
+            print("No DIGIT devices found.")
             return None
 
     def set_qvga_30fps(self):
@@ -68,12 +68,12 @@ class DigitController:
         if self.digit:
             # Set stream resolution and fps
             # QVGA resolution
-            self.digit.set_resolution({'resolution': {'width': 320, 'height': 240}})
+            self.digit.set_resolution({"resolution": {"width": 320, "height": 240}})
             # 30 FPS
-            self.digit.set_fps(Digit.STREAMS['QVGA']['fps']['30fps'])
-            print('Set stream to QVGA 30fps.')
+            self.digit.set_fps(Digit.STREAMS["QVGA"]["fps"]["30fps"])
+            print("Set stream to QVGA 30fps.")
         else:
-            print('No DIGIT device connected. Cannot set stream.')
+            print("No DIGIT device connected. Cannot set stream.")
 
     def save_frame(self, save_dir, frame_num):
         """
@@ -85,10 +85,10 @@ class DigitController:
         """
 
         if self.digit:
-            self.digit.save_frame(f'{save_dir}/frame_{frame_num}.jpg')
-            print(f'Saved {save_dir}/frame_{frame_num}.jpg')
+            self.digit.save_frame(f"{save_dir}/frame_{frame_num}.jpg")
+            print(f"Saved {save_dir}/frame_{frame_num}.jpg")
         else:
-            print('No DIGIT device connected. Cannot save frame.')
+            print("No DIGIT device connected. Cannot save frame.")
 
     def disconnect(self):
         """Disconnect the DIGIT device."""
@@ -97,4 +97,4 @@ class DigitController:
             try:
                 self.digit.disconnect()
             except Exception as e:
-                print(f'Failed to disconnect DIGIT: {e}')
+                print(f"Failed to disconnect DIGIT: {e}")

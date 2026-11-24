@@ -11,7 +11,7 @@
 ## Requirements
 
 - **Operating System:** Linux only (DIGIT sensors are supported on Linux only)
-- **Tested Environment:** Ubuntu 22.04, Python 3.13.5
+- **Tested Environment:** Ubuntu 24.04, Python 3.12
 - **Python Environment:** Regular Python or Anaconda environment
 - **Packages:** [digit-interface](https://github.com/facebookresearch/digit-interface), [openai](https://github.com/openai/openai-python)
 
